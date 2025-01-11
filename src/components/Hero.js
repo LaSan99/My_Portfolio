@@ -1,5 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaArrowDown } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer, scaleIn } from "../utils/animations";
 
 const Hero = () => {
   return (
@@ -11,12 +13,15 @@ const Hero = () => {
         url('https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?q=80&w=2071&auto=format&fit=crop')`,
       }}
     >
-      {/* Animated Background Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20"></div>
 
-      <div className="container mx-auto px-6 py-20 text-center relative z-10">
-        {/* Profile Image with Animation */}
-        <div className="relative inline-block mb-8">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        animate="visible"
+        className="container mx-auto px-6 py-20 text-center relative z-10"
+      >
+        <motion.div variants={scaleIn} className="relative inline-block mb-8">
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl transform hover:scale-105 transition-transform duration-300">
             <img
               src="https://images.unsplash.com/photo-1511804074-5e57bc14db9f?q=80&w=1897&auto=format&fit=crop"
@@ -24,73 +29,70 @@ const Hero = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse"></div>
-        </div>
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 1, 0.5],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20"
+          ></motion.div>
+        </motion.div>
 
-        {/* Name and Title with Animations */}
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in-down">
+        <motion.h1
+          variants={fadeIn("up")}
+          className="text-4xl md:text-6xl font-bold text-white mb-4"
+        >
           Lasan Navodya
-        </h1>
-        <div className="flex flex-col items-center space-y-4">
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in-up">
-            <span className="text-blue-400">Full Stack Developer</span> |{" "}
-            <span className="text-purple-400">UI/UX Designer</span>
-          </p>
+        </motion.h1>
 
-          {/* Social Links */}
-          <div className="flex justify-center space-x-4 mb-8">
-            <a
-              href="https://github.com/LaSan99"
+        <motion.div
+          variants={fadeIn("up")}
+          className="flex justify-center gap-4 mt-8"
+        >
+          {[
+            { icon: FaGithub, href: "https://github.com/LaSan99" },
+            { icon: FaLinkedin, href: "https://linkedin.com/in/yourusername" },
+            { icon: FaTwitter, href: "https://twitter.com/yourusername" },
+          ].map((social, index) => (
+            <motion.a
+              key={index}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-blue-400 transform hover:scale-110 transition-all duration-300"
+              className="text-white hover:text-blue-400 transition-colors duration-300"
             >
-              <FaGithub size={24} />
-            </a>
-            <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-blue-400 transform hover:scale-110 transition-all duration-300"
-            >
-              <FaLinkedin size={24} />
-            </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-blue-400 transform hover:scale-110 transition-all duration-300"
-            >
-              <FaTwitter size={24} />
-            </a>
-          </div>
+              <social.icon className="w-6 h-6" />
+            </motion.a>
+          ))}
+        </motion.div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="#projects"
-              className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full transition duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
-            >
-              <span>View Projects</span>
-              <FaArrowDown className="animate-bounce" />
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white/10 text-white font-semibold rounded-full transition duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-            >
-              <span>Contact Me</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <FaArrowDown className="text-white text-2xl" />
-        </div>
-      </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-900 to-transparent"></div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        >
+          <motion.div
+            animate={{
+              y: [0, 10, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <FaArrowDown className="text-white text-2xl animate-bounce" />
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

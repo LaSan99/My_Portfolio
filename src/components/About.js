@@ -7,6 +7,8 @@ import {
   FaServer,
   FaMobile,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/animations";
 
 const skills = [
   {
@@ -33,24 +35,35 @@ const skills = [
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
-    >
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">
-            About Me
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-12">
-            Turning ideas into reality through code
-          </p>
+    <section id="about" className="py-20 bg-white dark:bg-gray-800">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="container mx-auto px-6"
+      >
+        <motion.div variants={fadeIn("up")} className="max-w-6xl mx-auto">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <motion.h2
+              variants={fadeIn("up")}
+              className="text-4xl font-bold text-gray-800 dark:text-white mb-4"
+            >
+              About Me
+            </motion.h2>
+            <motion.p
+              variants={fadeIn("up")}
+              className="text-xl text-gray-600 dark:text-gray-300"
+            >
+              Turning ideas into reality through code
+            </motion.p>
+          </div>
 
-          {/* Main Content */}
+          {/* Main Content Grid */}
           <div className="grid md:grid-cols-[2fr,1fr] gap-12 items-center mb-16">
             {/* Text Content */}
-            <div className="space-y-6">
+            <motion.div variants={fadeIn("right")} className="space-y-6">
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 Hello! I'm a passionate Full Stack Developer based in Sri Lanka,
                 specializing in building exceptional digital experiences. With a
@@ -64,58 +77,87 @@ const About = () => {
                 challenging projects that push my boundaries and help me grow as
                 a developer.
               </p>
-              <div className="flex gap-4">
-                <a
-                  href="https://github.com/LaSan99"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
-                >
-                  <FaGithub className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
-                >
-                  <FaLinkedin className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                </a>
-                <a
-                  href="https://twitter.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
-                >
-                  <FaTwitter className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                </a>
-              </div>
-            </div>
+              <motion.div variants={fadeIn("up")} className="flex gap-4">
+                {[
+                  { icon: FaGithub, href: "https://github.com/LaSan99" },
+                  {
+                    icon: FaLinkedin,
+                    href: "https://linkedin.com/in/yourusername",
+                  },
+                  { icon: FaTwitter, href: "https://twitter.com/yourusername" },
+                ].map((social, index) => (
+                  <motion.a
+                    key={index}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
+                  >
+                    <social.icon className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                  </motion.a>
+                ))}
+              </motion.div>
+            </motion.div>
 
-            {/* Profile Image */}
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+            {/* Profile Image with Decorative Elements */}
+            <motion.div variants={fadeIn("left")} className="relative">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                className="aspect-square rounded-2xl overflow-hidden shadow-xl"
+              >
                 <img
                   src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?q=80&w=2070&auto=format&fit=crop"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-500 rounded-xl -z-10"></div>
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-purple-500 rounded-xl -z-10"></div>
-            </div>
+              </motion.div>
+              <motion.div
+                animate={{
+                  rotate: [0, 360],
+                }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-500 rounded-xl -z-10"
+              />
+              <motion.div
+                animate={{
+                  rotate: [360, 0],
+                }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute -top-6 -left-6 w-24 h-24 bg-purple-500 rounded-xl -z-10"
+              />
+            </motion.div>
           </div>
 
           {/* Skills Section */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <motion.div
+            variants={staggerContainer}
+            className="grid md:grid-cols-3 gap-8"
+          >
             {skills.map((skill, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-shadow duration-300"
+                variants={fadeIn("up")}
+                whileHover={{ y: -10 }}
+                className="p-6 bg-gray-50 dark:bg-gray-700 rounded-xl hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4"
+                >
                   <skill.icon className="w-6 h-6 text-white" />
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
                   {skill.title}
                 </h3>
@@ -124,19 +166,20 @@ const About = () => {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {skill.technologies.map((tech, techIndex) => (
-                    <span
+                    <motion.span
                       key={techIndex}
-                      className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
+                      whileHover={{ scale: 1.05 }}
+                      className="px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

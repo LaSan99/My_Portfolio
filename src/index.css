@@ -5,3 +5,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, #4f46e5 1px, transparent 1px),
+    linear-gradient(to bottom, #4f46e5 1px, transparent 1px);
+  background-size: 24px 24px;
+}

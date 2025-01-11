@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/animations";
 
 const skills = [
   {
@@ -45,18 +47,35 @@ const Skills = () => {
       id="skills"
       className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
     >
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="container mx-auto px-6"
+      >
+        <motion.h2
+          variants={fadeIn("up")}
+          className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12"
+        >
           Technical Skills
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        </motion.h2>
+
+        <motion.div
+          variants={staggerContainer}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        >
           {skills.map((skill, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300"
+              variants={fadeIn("up")}
+              whileHover={{ scale: 1.03 }}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6"
             >
               <div className="flex items-center mb-4">
-                <img
+                <motion.img
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
                   src={skill.icon}
                   alt={skill.name}
                   className="w-8 h-8 mr-3"
@@ -67,31 +86,27 @@ const Skills = () => {
               </div>
               <div className="relative pt-1">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="text-right">
-                    <span className="text-sm font-semibold inline-block text-gray-600 dark:text-gray-300">
-                      Proficiency
-                    </span>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-sm font-semibold inline-block text-gray-600 dark:text-gray-300">
-                      {skill.level}%
-                    </span>
-                  </div>
+                  <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">
+                    Proficiency
+                  </span>
+                  <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">
+                    {skill.level}%
+                  </span>
                 </div>
                 <div className="overflow-hidden h-2 text-xs flex rounded-full bg-gray-200 dark:bg-gray-700">
-                  <div
-                    style={{
-                      width: `${skill.level}%`,
-                      backgroundColor: skill.color,
-                    }}
-                    className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center transition-all duration-500 ease-out"
-                  ></div>
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    style={{ backgroundColor: skill.color }}
+                    className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center"
+                  ></motion.div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
