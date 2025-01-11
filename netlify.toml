@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[context.production.environment]
+  REACT_APP_EMAILJS_SERVICE_ID = "service_2n6rs04"
+  REACT_APP_EMAILJS_TEMPLATE_ID = "template_ye7u90n"
+  REACT_APP_EMAILJS_PUBLIC_KEY = "RglwY8A8R3t1DAL_o"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
