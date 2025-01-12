@@ -12,7 +12,7 @@ const Footer = () => {
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
+      url: "www.linkedin.com/in/lasan-navodya-6612112a2",
       icon: FaLinkedin,
       hoverColor: "hover:text-blue-400",
     },

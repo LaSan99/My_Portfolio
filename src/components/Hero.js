@@ -56,7 +56,7 @@ const Hero = () => {
         >
           {[
             { icon: FaGithub, href: "https://github.com/LaSan99" },
-            { icon: FaLinkedin, href: "https://linkedin.com/in/yourusername" },
+            { icon: FaLinkedin, href: "www.linkedin.com/in/lasan-navodya-6612112a2" },
             { icon: FaTwitter, href: "https://twitter.com/yourusername" },
           ].map((social, index) => (
             <motion.a
