@@ -1,6 +1,10 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import portfolio from "../assets/port.png";
+import music from "../assets/music.png";
+import lost from "../assets/lost.png";
+import tourism from "../assets/booking.png";
 
 const projects = [
   {
@@ -10,28 +14,44 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1558403194-611308249627?q=80&w=2070&auto=format&fit=crop",
     github: "https://github.com/LaSan99/KV-AUDIO",
-    demo: "https://snakemern.netlify.app/",
+    demo: "#",
     tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
   },
   {
     title: "Portfolio Website",
     description:
       "A modern, responsive portfolio website built with React and Tailwind CSS, featuring dark mode, contact form, and smooth animations.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    github: "https://github.com/yourusername/project2",
-    demo: "https://project2-demo.com",
+    image: portfolio,
+    github: "https://github.com/LaSan99/My_Portfolio",
+    demo: "https://lasanportfolio.netlify.app/",
     tags: ["React", "Tailwind CSS", "EmailJS", "Responsive Design"],
   },
   {
-    title: "Task Management App",
+    title: "Music App",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
-    github: "https://github.com/yourusername/project3",
-    demo: "https://project3-demo.com",
-    tags: ["React", "Firebase", "Material-UI", "Real-time Database"],
+      "A music app with a modern UI and a sleek design, featuring a search bar, a playlist, and a music player.",
+    image: music,
+    github: "https://github.com/LaSan99/MUSIC_APP",
+    demo: "#",
+    tags: ["React", "MongoDB", "Node.js", "Express", "Tailwind CSS"],
+  },
+  {
+    title: "LostConnect App",
+    description:
+      "A lost and found app with a modern UI and a sleek design, featuring a search bar, a lost and found, and a lost and found.",
+    image: lost,
+    github: "#",
+    demo: "#",
+    tags: ["React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
+  },
+  {
+    title: "Tourism Vehicle Booking App",
+    description:
+      "A tourism vehicle booking app with a modern UI and a sleek design, featuring a search bar, a lost and found, and a lost and found.",
+    image: tourism,
+    github: "#",
+    demo: "#",
+    tags: ["React", "Express", "MongoDB", "Node.js", "Material-UI"],
   },
 ];
 
