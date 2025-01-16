@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaArrowDown } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, scaleIn } from "../utils/animations";
+import profile from "../assets/my.jpg";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
         <motion.div variants={scaleIn} className="relative inline-block mb-8">
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl transform hover:scale-105 transition-transform duration-300">
             <img
-              src="https://images.unsplash.com/photo-1511804074-5e57bc14db9f?q=80&w=1897&auto=format&fit=crop"
+              src={profile}
               alt="Lasan Navodya"
               className="w-full h-full object-cover"
             />
