@@ -1,5 +1,11 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaArrowDown } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaArrowDown,
+  FaFileDownload,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, scaleIn } from "../utils/animations";
 import profile from "../assets/my.jpg";
@@ -57,7 +63,10 @@ const Hero = () => {
         >
           {[
             { icon: FaGithub, href: "https://github.com/LaSan99" },
-            { icon: FaLinkedin, href: "www.linkedin.com/in/lasan-navodya-6612112a2" },
+            {
+              icon: FaLinkedin,
+              href: "www.linkedin.com/in/lasan-navodya-6612112a2",
+            },
             { icon: FaTwitter, href: "https://twitter.com/yourusername" },
           ].map((social, index) => (
             <motion.a
@@ -72,6 +81,20 @@ const Hero = () => {
               <social.icon className="w-6 h-6" />
             </motion.a>
           ))}
+        </motion.div>
+
+        {/* CV Download Button */}
+        <motion.div variants={fadeIn("up")} className="mt-8">
+          <motion.a
+            href="/assets/resume.pdf"
+            download
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
+            <FaFileDownload className="w-5 h-5 mr-2" />
+            Download CV
+          </motion.a>
         </motion.div>
 
         <motion.div

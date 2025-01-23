@@ -103,8 +103,8 @@ const Footer = () => {
               reserved.
             </p>
             <p className="flex items-center text-sm text-gray-400 mt-4 md:mt-0">
-              Made with <FaHeart className="text-red-500 mx-1 animate-pulse" />{" "}
-              in <span className="ml-1">Sri Lanka</span>
+              Designed By - Lasan Navodya <FaHeart className="text-red-500 mx-1 animate-pulse" />{" "}
+              
             </p>
           </div>
         </div>

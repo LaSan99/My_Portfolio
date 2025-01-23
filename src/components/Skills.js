@@ -28,16 +28,22 @@ const skills = [
     color: "#339933",
   },
   {
-    name: "TypeScript",
+    name: "PHP",
     level: 75,
-    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
-    color: "#3178C6",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
+    color: "#777BB4",
   },
   {
-    name: "GraphQL",
-    level: 70,
-    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain.svg",
-    color: "#E10098",
+    name: "MongoDB",
+    level: 85,
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
+    color: "#47A248",
+  },
+  {
+    name: "MySQL",
+    level: 80,
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg", 
+    color: "#4479A1",
   },
 ];
 

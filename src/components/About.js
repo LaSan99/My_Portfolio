@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/animations";
+import profileImage from "../assets/myport.jpg";
 
 const skills = [
   {
@@ -65,17 +66,15 @@ const About = () => {
             {/* Text Content */}
             <motion.div variants={fadeIn("right")} className="space-y-6">
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Hello! I'm a passionate Full Stack Developer based in Sri Lanka,
-                specializing in building exceptional digital experiences. With a
-                strong foundation in both frontend and backend development, I
-                create scalable, user-friendly applications that solve
-                real-world problems.
+                Hello! I'm a Software Engineering undergraduate student at SLIIT university Malabe, Sri Lanka.
+                I'm passionate about full-stack development and building exceptional digital experiences. With a
+                growing foundation in both frontend and backend technologies, I strive to create scalable,
+                user-friendly applications that solve real-world problems.
               </p>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Currently, I'm focused on building accessible, human-centered
-                products using modern web technologies. I enjoy working on
-                challenging projects that push my boundaries and help me grow as
-                a developer.
+                Currently, I'm focused on expanding my knowledge and skills through hands-on projects
+                while pursuing my degree. I enjoy taking on challenging assignments that push my boundaries
+                and contribute to my growth as an aspiring software engineer.
               </p>
               <motion.div variants={fadeIn("up")} className="flex gap-4">
                 {[
@@ -109,7 +108,7 @@ const About = () => {
                 className="aspect-square rounded-2xl overflow-hidden shadow-xl"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?q=80&w=2070&auto=format&fit=crop"
+                  src={profileImage}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
