@@ -5,6 +5,7 @@ import portfolio from "../assets/port.png";
 import music from "../assets/music.png";
 import lost from "../assets/lost.png";
 import tourism from "../assets/booking.png";
+import humanizer from "../assets/humanizer.jpg";
 
 const projects = [
   {
@@ -52,6 +53,15 @@ const projects = [
     github: "#",
     demo: "#",
     tags: ["React", "Express", "MongoDB", "Node.js", "Material-UI"],
+  },
+  {
+    title: "Text Humanizer App",
+    description:
+      "A versatile text transformation tool that converts text into a more natural, human-like format. Features include text case conversion, formatting options, and real-time preview with a clean, modern interface.",
+    image: humanizer,
+    github: "https://github.com/LaSan99/Text_humanizer",
+    demo: "https://text-humanizer.netlify.app/",
+    tags: ["React", "Next.js", "Tailwind CSS", "DaisyUI"],
   },
 ];
 
