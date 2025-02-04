@@ -6,6 +6,7 @@ import music from "../assets/music.png";
 import lost from "../assets/lost.png";
 import tourism from "../assets/booking.png";
 import humanizer from "../assets/humanizer.jpg";
+import nextVehicle from "../assets/nextjs-vehicle-book.jpg"
 
 const projects = [
   {
@@ -62,6 +63,15 @@ const projects = [
     github: "https://github.com/LaSan99/Text_humanizer",
     demo: "https://text-humanizer.netlify.app/",
     tags: ["React", "Next.js", "Tailwind CSS", "DaisyUI"],
+  },
+  {
+    title: "NextJs Vehicle Renting App",
+    description:
+      "A modern vehicle rental platform built with Next.js, featuring an intuitive booking system, real-time availability checking, and secure payment integration. Users can easily browse vehicles, compare prices, and make reservations with a seamless, responsive interface.",
+    image: nextVehicle,
+    github: "https://github.com/LaSan99/NextJs-vehicle-booking", 
+    demo: "https://next-js-vehicle-booking.vercel.app/",
+    tags: ["React", "Next.js", "Tailwind CSS", "Superbase", "Prisma"],
   },
 ];
 
