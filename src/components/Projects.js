@@ -7,14 +7,14 @@ import lost from "../assets/lost.png";
 import tourism from "../assets/booking.png";
 import humanizer from "../assets/humanizer.jpg";
 import nextVehicle from "../assets/nextjs-vehicle-book.jpg"
+import a1 from "../assets/a1.jpg";
 
 const projects = [
   {
     title: "KV Audio",
     description:
       "A full-stack e-commerce platform for audio equipment with real-time inventory management, secure payments, and an intuitive admin dashboard.",
-    image:
-      "https://images.unsplash.com/photo-1558403194-611308249627?q=80&w=2070&auto=format&fit=crop",
+    image: a1,
     github: "https://github.com/LaSan99/KV-AUDIO",
     demo: "#",
     tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
