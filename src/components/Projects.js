@@ -169,10 +169,8 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-bold text-center text-gray-800 dark:text-white mb-4">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
-              Featured Projects
-            </span>
+          <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">
+            Featured Projects
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-center mb-8 max-w-2xl mx-auto text-lg">
             Here are some of my recent projects that showcase my skills in web
@@ -230,54 +228,53 @@ const Projects = () => {
               key={index}
               variants={projectVariants}
               whileHover={{ 
-                scale: 1.03,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
+                scale: 1.02, // More subtle scale
+                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" // Simpler shadow
               }}
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
-              className="bg-white dark:bg-gray-700 rounded-xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-600 transform transition-all duration-300"
+              className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-600 transition-all duration-300" // Adjusted rounding and shadow
             >
               <div className="relative overflow-hidden h-52">
                 <motion.img
                   animate={{ 
-                    scale: hoveredIndex === index ? 1.1 : 1,
-                    filter: hoveredIndex === index ? "brightness(0.7)" : "brightness(1)"
+                    scale: hoveredIndex === index ? 1.05 : 1, // More subtle image scale
+                    filter: hoveredIndex === index ? "brightness(0.8)" : "brightness(1)" // Less aggressive brightness
                   }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.3 }}
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0 }}
                   animate={{ 
-                    opacity: hoveredIndex === index ? 1 : 0,
-                    y: hoveredIndex === index ? 0 : 20
+                    opacity: hoveredIndex === index ? 1 : 0
                   }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-center justify-center space-x-6"
+                  transition={{ duration: 0.2 }}
+                  className="absolute inset-0 bg-black/50 flex items-center justify-center space-x-4" // Simplified background overlay
                 >
                   <motion.a
-                    whileHover={{ scale: 1.2, rotate: 360 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ duration: 0.5 }}
+                    whileHover={{ scale: 1.1 }} // Removed rotate
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white rounded-full hover:bg-gray-100 shadow-lg"
+                    className="p-2 bg-white rounded-full hover:bg-gray-200 shadow-md" // Adjusted padding and shadow
                   >
-                    <FaGithub className="w-6 h-6 text-gray-800" />
+                    <FaGithub className="w-5 h-5 text-gray-700" /> 
                   </motion.a>
                   <motion.a
-                    whileHover={{ scale: 1.2, rotate: 360 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ duration: 0.5 }}
+                    whileHover={{ scale: 1.1 }} // Removed rotate
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white rounded-full hover:bg-gray-100 shadow-lg"
+                    className="p-2 bg-white rounded-full hover:bg-gray-200 shadow-md" // Adjusted padding and shadow
                   >
-                    <FaExternalLinkAlt className="w-6 h-6 text-gray-800" />
+                    <FaExternalLinkAlt className="w-5 h-5 text-gray-700" />
                   </motion.a>
                 </motion.div>
               </div>
@@ -323,63 +320,51 @@ const Projects = () => {
                   ))}
                 </div>
                 <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }} // Reduced y offset
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.4, duration: 0.5 }}
-                  className="flex justify-between items-center"
+                  transition={{ delay: index * 0.1 + 0.3, duration: 0.4 }} // Adjusted delay and duration
+                  className="flex justify-start items-center space-x-4 mt-4" // Align to start, add spacing
                 >
                   <motion.a
-                    whileHover={{ scale: 1.05, x: -5 }}
+                    whileHover={{ scale: 1.05 }} // Removed x-axis movement
                     whileTap={{ scale: 0.95 }}
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-300 flex items-center font-medium"
+                    className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200 flex items-center text-sm font-medium" // Adjusted colors and font size
                   >
-                    <FaGithub className="mr-2" /> View Code
+                    <FaGithub className="mr-1.5 h-4 w-4" /> View Code 
                   </motion.a>
                   <motion.a
-                    whileHover={{ scale: 1.05, x: 5 }}
+                    whileHover={{ scale: 1.05 }} // Removed x-axis movement
                     whileTap={{ scale: 0.95 }}
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-500 hover:text-green-600 dark:text-green-400 dark:hover:text-green-300 transition-colors duration-300 flex items-center font-medium"
+                    className="text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 transition-colors duration-200 flex items-center text-sm font-medium" // Adjusted colors and font size
                   >
-                    <FaExternalLinkAlt className="mr-2" /> Live Demo
+                    <FaExternalLinkAlt className="mr-1.5 h-4 w-4" /> Live Demo
                   </motion.a>
                 </motion.div>
               </div>
-              
-              {/* Gradient border animation when hovered */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: hoveredIndex === index ? 1 : 0 }}
-                transition={{ duration: 0.3 }}
-                className="absolute inset-0 z-[-1] rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
-                style={{ 
-                  padding: "2px",
-                  margin: "-2px",
-                  pointerEvents: "none"
-                }}
-              />
+              {/* Removed Gradient border animation */}
             </motion.div>
           ))}
         </motion.div>
         
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }} // Reduced y offset
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-center mt-16"
+          transition={{ delay: 0.5, duration: 0.6 }} // Adjusted delay and duration
+          className="text-center mt-12" // Reduced margin top
         >
           <a 
             href="https://github.com/LaSan99" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium py-3 px-8 rounded-full hover:shadow-lg hover:shadow-blue-300/50 dark:hover:shadow-blue-800/50 transition-all duration-300 transform hover:scale-105"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-lg transition-all duration-300 transform hover:scale-103" // Simplified button style
           >
             See More Projects on GitHub
           </a>

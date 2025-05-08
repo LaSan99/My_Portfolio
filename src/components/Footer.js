@@ -62,15 +62,15 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-indigo-900 to-purple-900 text-white py-8">
+    <footer className="bg-gray-800 text-white py-8"> {/* Changed background to solid dark gray */}
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
           {/* Brand Section */}
           <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold text-white"> {/* Simplified brand name color */}
               Lasan Navodya
             </h3>
-            <p className="text-gray-300 text-sm mt-1">
+            <p className="text-gray-400 text-sm mt-1"> {/* Adjusted subtitle color for better contrast */}
               Developer • Designer • Creator
             </p>
           </div>
@@ -84,7 +84,7 @@ const Footer = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transform hover:scale-110 transition-all duration-300"
+                  className="p-2 text-gray-400 hover:text-white rounded-full hover:bg-gray-700 transform hover:scale-105 transition-all duration-200" // Simplified social icon hover
                   aria-label={link.ariaLabel}
                 >
                   <Icon name={link.icon} />
@@ -94,16 +94,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-white border-opacity-20">
+        <div className="pt-6 border-t border-gray-700"> {/* Adjusted border color */}
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <p className="text-center md:text-left text-gray-300">
+            <p className="text-center md:text-left text-gray-400"> {/* Adjusted copyright text color */}
               &copy; {new Date().getFullYear()} Lasan Navodya. All rights reserved.
             </p>
             <div className="flex items-center mt-3 md:mt-0">
-              <a href="#about" className="mx-2 text-gray-300 hover:text-white transition-colors">About</a>
-              <a href="#projects" className="mx-2 text-gray-300 hover:text-white transition-colors">Projects</a>
-              <a href="#skills" className="mx-2 text-gray-300 hover:text-white transition-colors">Skills</a>
-              <a href="#contact" className="mx-2 text-gray-300 hover:text-white transition-colors">Contact</a>
+              <a href="#about" className="mx-2 text-gray-400 hover:text-white transition-colors">About</a>
+              <a href="#projects" className="mx-2 text-gray-400 hover:text-white transition-colors">Projects</a>
+              <a href="#skills" className="mx-2 text-gray-400 hover:text-white transition-colors">Skills</a>
+              <a href="#contact" className="mx-2 text-gray-400 hover:text-white transition-colors">Contact</a>
             </div>
           </div>
         </div>
