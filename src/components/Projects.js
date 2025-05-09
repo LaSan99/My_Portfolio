@@ -12,6 +12,7 @@ import s1 from "../assets/s1.jpg";
 import shoe from "../assets/shoes.jpg";
 import pawgo from "../assets/pawgo.jpg";
 import adcraft from "../assets/adcraft.jpg";
+import staff from "../assets/staff.jpg";
 
 const projects = [
   {
@@ -113,7 +114,15 @@ const projects = [
     demo: "#",
     tags: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
   },
-
+  {
+    title: "Staff Management System",
+    description:
+      "A comprehensive staff management system built with PHP and MySQL. It allows organizations to manage employee records, attendance, payroll, and performance evaluations. Features include employee onboarding, leave management, and reporting.",
+    image: staff,
+    github: "https://github.com/LaSan99/StaffManagement_java",
+    demo: "#",
+    tags: ["Java", "MySQL", "JavaScript", "HTML", "CSS"],
+  },
 ];
 
 const Projects = () => {
