@@ -10,6 +10,7 @@ import nextVehicle from "../assets/nextjs-vehicle-book.jpg"
 import a1 from "../assets/a1.jpg";
 import s1 from "../assets/s1.jpg";
 import shoe from "../assets/shoes.jpg";
+import pawgo from "../assets/pawgo.jpg";
 
 const projects = [
   {
@@ -93,6 +94,16 @@ const projects = [
     demo: "https://e-com-front.netlify.app/",
     tags: ["React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
   },
+  {
+    title: "PawGo PetCare Marketplace",
+    description:
+      "PawGo is a comprehensive pet care marketplace that connects pet owners with service providers and pet supplies. Features include pet care service bookings, pet product listings, advertisement publishing for pet services, and a modern dashboard for service providers and sellers.",
+    image: pawgo,
+    github: "#",
+    demo: "https://paw-go.vercel.app/",
+    tags: ["React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
+  },
+
 ];
 
 const Projects = () => {
