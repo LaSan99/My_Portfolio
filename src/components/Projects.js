@@ -11,6 +11,7 @@ import a1 from "../assets/a1.jpg";
 import s1 from "../assets/s1.jpg";
 import shoe from "../assets/shoes.jpg";
 import pawgo from "../assets/pawgo.jpg";
+import adcraft from "../assets/adcraft.jpg";
 
 const projects = [
   {
@@ -102,6 +103,15 @@ const projects = [
     github: "#",
     demo: "https://paw-go.vercel.app/",
     tags: ["React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
+  },
+  {
+    title: "ADCRAFT online Advertisement Platform",
+    description:
+      "AdCraft is an online advertising platform built with PHP and MySQL. It allows users to create and manage ad campaigns, track performance, and target specific audiences. Features include campaign creation, ad scheduling, budget management, and detailed analytics.",
+    image: adcraft,
+    github: "https://github.com/LaSan99/ADCRAFT-PHP",
+    demo: "#",
+    tags: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
   },
 
 ];
