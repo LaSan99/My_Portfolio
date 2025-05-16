@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FloatingRobot from './components/FloatingRobot';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,6 +28,7 @@ function App() {
       <Skills />
       <Contact />
       <Footer />
+      <FloatingRobot />
     </div>
   );
 }
