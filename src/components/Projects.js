@@ -13,102 +13,103 @@ import shoe from "../assets/shoes.jpg";
 import pawgo from "../assets/pawgo.jpg";
 import adcraft from "../assets/adcraft.jpg";
 import staff from "../assets/staff.jpg";
+import pc from "../assets/pc.jpg";
 
 const projects = [
   {
-    title: "KV Audio",
+    title: "KV Audio E-Commerce Platform",
     description:
-      "A full-stack e-commerce platform for audio equipment with real-time inventory management, secure payments, and an intuitive admin dashboard.",
+      "A full-stack e-commerce platform for audio equipment featuring real-time inventory tracking, secure payment integration, and an advanced admin dashboard.",
     image: a1,
     github: "https://github.com/LaSan99/KV-AUDIO",
-    demo: "#",
+    demo: "https://kv-audio-front.vercel.app/",
     tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
   },
   {
-    title: "Portfolio Website",
+    title: "Personal Portfolio Website",
     description:
-      "A modern, responsive portfolio website built with React and Tailwind CSS, featuring dark mode, contact form, and smooth animations.",
+      "A responsive portfolio website with dark mode, smooth animations, and an integrated contact form built using React and Tailwind CSS.",
     image: portfolio,
     github: "https://github.com/LaSan99/My_Portfolio",
     demo: "https://lasanportfolio.netlify.app/",
     tags: ["React", "Tailwind CSS", "EmailJS", "Responsive Design"],
   },
   {
-    title: "Music App",
+    title: "Modern Music Streaming App",
     description:
-      "A music app with a modern UI and a sleek design, featuring a search bar, a playlist, and a music player.",
+      "A music streaming app with a clean UI, search functionality, playlist management, and a built-in audio player.",
     image: music,
     github: "https://github.com/LaSan99/MUSIC_APP",
     demo: "#",
     tags: ["React", "MongoDB", "Node.js", "Express", "Tailwind CSS"],
   },
   {
-    title: "LostConnect App",
+    title: "LostConnect - Lost & Found App",
     description:
-      "A lost and found app with a modern UI and a sleek design, featuring a search bar, a lost and found, and a lost and found.",
+      "A lost and found platform that allows users to report and search for lost items with an intuitive interface and real-time updates.",
     image: lost,
-    github: "#",
+    github: "https://github.com/LaSan99/LostConnect",
     demo: "#",
     tags: ["React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
   },
   {
-    title: "Tourism Vehicle Booking App",
+    title: "Tourism Vehicle Booking Platform",
     description:
-      "A tourism vehicle booking app with a modern UI and a sleek design, featuring a search bar, a lost and found, and a lost and found.",
+      "A booking platform for tourism vehicles with advanced search, real-time availability, and responsive design for seamless user experience.",
     image: tourism,
     github: "#",
     demo: "#",
     tags: ["React", "Express", "MongoDB", "Node.js", "Material-UI"],
   },
   {
-    title: "Text Humanizer App",
+    title: "Text Humanizer Tool",
     description:
-      "A versatile text transformation tool that converts text into a more natural, human-like format. Features include text case conversion, formatting options, and real-time preview with a clean, modern interface.",
+      "A text transformation tool that converts text into natural language. Includes case conversion, formatting options, and real-time preview.",
     image: humanizer,
     github: "https://github.com/LaSan99/Text_humanizer",
     demo: "https://text-humanizer.netlify.app/",
     tags: ["React", "Next.js", "Tailwind CSS", "DaisyUI"],
   },
   {
-    title: "NextJs Vehicle Renting App",
+    title: "Next.js Vehicle Rental System",
     description:
-      "A modern vehicle rental platform built with Next.js, featuring an intuitive booking system, real-time availability checking, and secure payment integration. Users can easily browse vehicles, compare prices, and make reservations with a seamless, responsive interface.",
+      "A vehicle rental app built with Next.js featuring an intuitive booking system, availability checks, and a fully responsive interface.",
     image: nextVehicle,
     github: "https://github.com/LaSan99/NextJs-vehicle-booking", 
     demo: "https://next-js-vehicle-booking.vercel.app/",
     tags: ["React", "Next.js", "Tailwind CSS", "Superbase", "Prisma"],
   },
   {
-    title: "Saloon Booking App",
+    title: "Salon Appointment Booking App",
     description:
-      "A full-stack salon booking app with a modern UI and a sleek design, featuring a search bar, a lost and found, and a lost and found.",
+      "A salon booking platform with user-friendly scheduling, responsive design, and modern UI for quick and easy reservations.",
     image: s1,
-    github: "#",
+    github: "https://github.com/LaSan99/Saloon_bakcend",
     demo: "https://saloon-frontend-chi.vercel.app/",
     tags: ["React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
   },
   {
     title: "Online Sneaker Store",
     description:
-      "Sneaker Store is a full-stack e-commerce platform for sneaker enthusiasts, featuring a modern UI, secure payment processing, and an intuitive admin dashboard for inventory management.",
+      "A full-stack sneaker e-commerce platform with secure payments, real-time inventory, and an admin dashboard for product management.",
     image: shoe,
-    github: "#",
+    github: "https://github.com/LaSan99/e-com-back",
     demo: "https://e-com-front.netlify.app/",
     tags: ["React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
   },
   {
-    title: "PawGo PetCare Marketplace",
+    title: "PawGo - Pet Care Marketplace",
     description:
-      "PawGo is a comprehensive pet care marketplace that connects pet owners with service providers and pet supplies. Features include pet care service bookings, pet product listings, advertisement publishing for pet services, and a modern dashboard for service providers and sellers.",
+      "A pet care marketplace offering grooming services, pet product listings, service provider dashboards, and loyalty points for customers.",
     image: pawgo,
-    github: "#",
+    github: "https://github.com/LaSan99/PawGo_backend",
     demo: "https://paw-go.vercel.app/",
     tags: ["React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
   },
   {
-    title: "ADCRAFT online Advertisement Platform",
+    title: "AdCraft - Online Advertising Platform",
     description:
-      "AdCraft is an online advertising platform built with PHP and MySQL. It allows users to create and manage ad campaigns, track performance, and target specific audiences. Features include campaign creation, ad scheduling, budget management, and detailed analytics.",
+      "A PHP-based ad management system for creating campaigns, scheduling ads, setting budgets, and tracking analytics in real time.",
     image: adcraft,
     github: "https://github.com/LaSan99/ADCRAFT-PHP",
     demo: "#",
@@ -117,13 +118,23 @@ const projects = [
   {
     title: "Staff Management System",
     description:
-      "A comprehensive staff management system built with PHP and MySQL. It allows organizations to manage employee records, attendance, payroll, and performance evaluations. Features include employee onboarding, leave management, and reporting.",
+      "A staff management application with employee records, attendance, payroll, leave management, and performance tracking features.",
     image: staff,
     github: "https://github.com/LaSan99/StaffManagement_java",
     demo: "#",
     tags: ["Java", "MySQL", "JavaScript", "HTML", "CSS"],
   },
+  {
+    title: "Online PC Store",
+    description:
+      "An online PC parts store developed using Java and Spring Boot with product management, secure checkout, and responsive UI.",
+    image: pc,
+    github: "https://github.com/LaSan99/PcStore",
+    demo: "#",
+    tags: ["Java", "MySQL", "Spring","Next.js"],
+  }
 ];
+
 
 const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
