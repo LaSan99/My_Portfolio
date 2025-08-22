@@ -17,14 +17,14 @@ const skills = [
     description:
       "Building responsive and interactive user interfaces using modern web technologies.",
     icon: FaCode,
-    technologies: ["React", "JavaScript", "HTML/CSS", "Tailwind CSS"],
+    technologies: ["React", "JavaScript", "HTML/CSS", "Tailwind CSS", "Next.js"],
     color: "from-blue-400 to-blue-600",
   },
   {
     title: "Backend Development",
     description: "Developing robust server-side applications and RESTful APIs.",
     icon: FaServer,
-    technologies: ["Node.js", "Express", "MongoDB", "Firebase"],
+    technologies: ["Node.js", "Express", "MongoDB", "Firebase", "Spring Boot", "Nest.js"],
     color: "from-purple-400 to-purple-600",
   },
   {
@@ -32,7 +32,7 @@ const skills = [
     description:
       "Creating cross-platform mobile applications with modern frameworks.",
     icon: FaMobile,
-    technologies: ["React Native", "Expo", "Mobile UI/UX"],
+    technologies: ["React Native", "Expo", "Mobile UI/UX", "Flutter"],
     color: "from-green-400 to-green-600",
   },
 ];

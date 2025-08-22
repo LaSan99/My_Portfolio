@@ -52,6 +52,13 @@ const skills = [
     color: "#4479A1",
     description: "Creating and optimizing relational database structures"
   },
+  {
+    name: "Spring Boot",
+    level: 75,
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
+    color: "#6DB33F",
+    description: "Building enterprise-level applications with Spring Boot"
+  }
 ];
 
 const Skills = () => {
@@ -294,6 +301,12 @@ const Skills = () => {
                   </svg>
                   JavaScript (ES6+)
                 </li>
+                <li className="flex items-center">
+                  <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  Next.js
+                </li>
               </ul>
             </motion.div>
             
@@ -321,6 +334,13 @@ const Skills = () => {
                   </svg>
                   RESTful APIs
                 </li>
+                <li className="flex items-center">
+                  <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  Spring Boot
+                </li>
+
               </ul>
             </motion.div>
             
